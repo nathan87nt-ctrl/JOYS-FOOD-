@@ -24,7 +24,11 @@ An optional note ("shared with someone", "extra rice") is passed to the AI. Ever
 
 **Body** — weight with current / change / goal, a trend line with the goal marked, plus the daily macro targets. Log a weight per day; goal weight draws a dashed line on the chart.
 
-**Language** — EN / ไทย toggle top-right. Switches the whole interface and the AI's dish names.
+**How-to card** — a short 4-step guide shows on the Today screen the first time. Tap *Got it* to hide it; bring it back any time from Body → Appearance.
+
+**Appearance** (Body tab) — seven themes including Thai-inspired ones (Orchid, Mango Sticky, Jade Temple, Chili Basil, Lotus) plus plain Dark and Light, and a text-size control (Normal / Large / Extra large) for bigger fonts.
+
+**Language** — EN / ไทย toggle top-right. Switches the whole interface, the theme names and the AI's dish names.
 
 ## Data notes
 

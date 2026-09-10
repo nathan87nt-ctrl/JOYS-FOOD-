@@ -17,8 +17,10 @@
     --accent:#fb7185; --accentText:#0c0c0e;
     --protein:#34d399; --carbs:#38bdf8; --fat:#fcd34d;
     --good:#34d399; --danger:#f87171;
+    --fs:1;   /* font scale — 1 normal, 1.15 large, 1.3 extra */
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{font-size:calc(16px * var(--fs))}
   html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
     font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overscroll-behavior-y:none}
   body{padding-top:env(safe-area-inset-top)}
@@ -30,23 +32,23 @@
   .hbtns{display:flex;align-items:center;gap:14px}
   .hbtn{background:none;border:0;color:var(--dim);font-size:19px;line-height:1;padding:4px;cursor:pointer}
   .status{font-size:10px;letter-spacing:.14em}
-  main{padding:16px 16px 96px;max-width:640px;margin:0 auto}
+  main{padding:16px 16px 96px;max-width:640px;margin:0 auto;font-size:calc(15px * var(--fs))}
   .card{background:var(--surface);border:1px solid var(--border);border-radius:16px}
   .p16{padding:16px} .p12{padding:12px}
   .mb12{margin-bottom:12px} .mb16{margin-bottom:16px} .mb8{margin-bottom:8px}
-  h2{font-size:14px;font-weight:700;margin:0 0 12px}
+  h2{font-size:0.93em;font-weight:700;margin:0 0 12px}
   .lbl{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--faint);margin-bottom:8px}
   input,textarea,select{width:100%;background:var(--surface2);border:1px solid var(--border);
-    color:var(--text);border-radius:10px;padding:10px 12px;font-size:15px;font-family:inherit;outline:none}
+    color:var(--text);border-radius:10px;padding:10px 12px;font-size:16px;font-family:inherit;outline:none}
   input:focus,textarea:focus{border-color:var(--accent)}
   textarea{resize:none}
   ::placeholder{color:var(--faint)}
   button{font-family:inherit;cursor:pointer}
   .btn{background:var(--accent);color:var(--accentText);border:0;border-radius:12px;
-    padding:11px 16px;font-weight:700;font-size:14px}
+    padding:11px 16px;font-weight:700;font-size:0.95em}
   .btn:disabled{opacity:.4}
   .btn2{background:var(--surface);color:var(--dim);border:1px solid var(--border);
-    border-radius:12px;padding:11px 16px;font-size:14px}
+    border-radius:12px;padding:11px 16px;font-size:0.95em}
   .btn-good{background:var(--good);color:var(--accentText);border:0;border-radius:12px;padding:10px 16px;font-weight:700;font-size:14px}
   .btn-danger{background:var(--danger);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:700;font-size:14px}
   .row{display:flex;gap:8px} .row.center{align-items:center}
@@ -57,13 +59,13 @@
   .item{display:flex;align-items:center;justify-content:space-between;
     background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:10px 12px;margin-bottom:6px}
   .muted{color:var(--faint)} .dim{color:var(--dim)}
-  .empty{text-align:center;color:var(--faint);font-size:14px;padding:32px 0}
+  .empty{text-align:center;color:var(--faint);font-size:0.95em;padding:32px 0}
   nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--surface);
     border-top:1px solid var(--border);padding-bottom:env(safe-area-inset-bottom);z-index:20}
-  nav button{flex:1;background:none;border:0;color:var(--faint);padding:9px 0 11px;font-size:9px;font-weight:700;
+  nav button{flex:1;background:none;border:0;color:var(--faint);padding:9px 0 11px;font-size:calc(9px * var(--fs));font-weight:700;
     letter-spacing:-.02em;min-width:0;overflow:hidden}
   nav button.on{color:var(--accent)}
-  nav .ico{font-size:16px;display:block;margin-bottom:3px}
+  nav .ico{font-size:calc(16px * var(--fs));display:block;margin-bottom:3px}
   .panel{padding:12px 16px;border-bottom:1px solid var(--border);background:var(--surface2)}
   .bar{height:6px;background:var(--border);border-radius:99px;overflow:hidden}
   .bar>i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .4s}
@@ -80,15 +82,15 @@
   .ring{position:relative;width:96px;height:96px;flex:none}
   .ring svg{transform:rotate(-90deg)}
   .ring .val{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-  .ring .val b{font-size:22px;font-weight:800;line-height:1}
-  .ring .val small{font-size:9px;color:var(--dim);letter-spacing:.1em;margin-top:2px}
+  .ring .val b{font-size:1.5em;font-weight:800;line-height:1}
+  .ring .val small{font-size:0.62em;color:var(--dim);letter-spacing:.1em;margin-top:2px}
   .mtable{flex:1}
   .mrow{display:flex;align-items:center;gap:8px;margin-bottom:10px}
   .mrow:last-child{margin-bottom:0}
-  .mrow .tag{font-size:11px;font-weight:700;width:58px;color:var(--dim)}
+  .mrow .tag{font-size:0.75em;font-weight:700;width:58px;color:var(--dim)}
   .mrow .track{flex:1;height:7px;background:var(--border);border-radius:99px;overflow:hidden}
   .mrow .track>i{display:block;height:100%;border-radius:99px;transition:width .4s}
-  .mrow .num{font-size:11px;color:var(--dim);width:66px;text-align:right;font-variant-numeric:tabular-nums}
+  .mrow .num{font-size:0.75em;color:var(--dim);width:66px;text-align:right;font-variant-numeric:tabular-nums}
 
   /* meal cards */
   .meal{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--border);
@@ -98,9 +100,9 @@
   .meal .thumbwrap .ba{position:absolute;right:-3px;bottom:-3px;background:var(--accent);color:var(--accentText);
     font-size:8px;font-weight:800;border-radius:6px;padding:1px 4px;letter-spacing:.04em}
   .meal .t{flex:1;min-width:0}
-  .meal .t b{font-weight:600;font-size:14px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .meal .t small{color:var(--dim);font-size:11px}
-  .meal .kc{text-align:right;font-weight:700;font-size:15px}
+  .meal .t b{font-weight:600;font-size:0.95em;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .meal .t small{color:var(--dim);font-size:0.75em}
+  .meal .kc{text-align:right;font-weight:700;font-size:1.02em}
   .meal .kc small{display:block;font-weight:500;font-size:10px;color:var(--faint)}
 
   /* capture */
@@ -121,17 +123,17 @@
 
   /* result items */
   .ln{display:grid;grid-template-columns:1fr 52px 38px 38px 38px 24px;gap:5px;align-items:center;
-    padding:9px 4px;border-bottom:1px solid var(--border);font-size:13px}
+    padding:9px 4px;border-bottom:1px solid var(--border);font-size:0.88em}
   .ln.head{color:var(--faint);font-size:9px;letter-spacing:.08em;font-weight:700}
   .ln:last-of-type{border-bottom:0}
-  .ln .nm b{font-weight:600;font-size:13px;display:block}
+  .ln .nm b{font-weight:600;font-size:0.9em;display:block}
   .ln .nm small{color:var(--faint);font-size:10px}
   .ln input{padding:5px 4px;font-size:13px;text-align:right;border-radius:7px}
   .ln .del{color:var(--faint);text-align:center}
   .lntot{display:grid;grid-template-columns:1fr 52px 38px 38px 38px 24px;gap:5px;padding:11px 4px 2px;font-weight:800;font-size:14px}
   .lntot span:not(.nm){text-align:right}
   .lntot .p{color:var(--protein)}.lntot .c{color:var(--carbs)}.lntot .f{color:var(--fat)}
-  .note{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:11px;font-size:13px;color:var(--dim);line-height:1.45}
+  .note{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:11px;font-size:0.9em;color:var(--dim);line-height:1.45}
   .conf{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;padding:3px 9px;border-radius:8px;margin-top:8px}
   .conf.low{background:#3a2020;color:#f87171}.conf.medium{background:#3a3320;color:#fbbf24}.conf.high{background:#1f3a2a;color:#34d399}
 
@@ -144,7 +146,7 @@
   .wk .dl{font-size:9px;color:var(--faint);font-weight:700}
   .wk .dv{font-size:9px;color:var(--dim);font-variant-numeric:tabular-nums}
   .wk .d.today .dl{color:var(--accent)}
-  .legend{display:flex;gap:14px;justify-content:center;margin-top:12px;font-size:11px;color:var(--dim)}
+  .legend{display:flex;gap:14px;justify-content:center;margin-top:12px;font-size:0.78em;color:var(--dim)}
   .legend span{display:flex;align-items:center;gap:5px}
   .legend i{width:9px;height:9px;border-radius:3px;display:inline-block}
 
@@ -153,17 +155,33 @@
   svg.line{width:100%;height:150px;display:block;overflow:visible}
   .stat{display:flex;gap:8px;margin-top:4px}
   .stat .s{flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:10px}
-  .stat .s b{font-size:19px;font-weight:800;display:block}
+  .stat .s b{font-size:1.3em;font-weight:800;display:block}
   .stat .s small{font-size:10px;color:var(--faint);letter-spacing:.08em;font-weight:700}
 
   .seg2{display:flex;background:var(--surface2);border:1px solid var(--border);border-radius:11px;padding:3px;gap:3px}
-  .seg2 button{flex:1;padding:8px 6px;border:0;border-radius:8px;background:none;color:var(--dim);font-weight:700;font-size:13px}
+  .seg2 button{flex:1;padding:10px 6px;border:0;border-radius:8px;background:none;color:var(--dim);font-weight:700;font-size:0.9em}
   .seg2 button.on{background:var(--accent);color:var(--accentText)}
+
+  /* how-to card */
+  .helpcard{border-color:var(--accent)}
+  .howto{list-style:none;margin:0 0 8px;padding:0}
+  .howto li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:0.95em;line-height:1.4;color:var(--text)}
+  .howto li:last-child{margin-bottom:14px}
+  .howto .n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accentText);
+    font-weight:800;font-size:0.8em;display:flex;align-items:center;justify-content:center;margin-top:1px}
+
+  /* theme swatches */
+  .themes{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .themebtn{display:flex;align-items:center;gap:9px;border:2px solid var(--border);background:var(--surface2);
+    border-radius:12px;padding:10px 11px;color:var(--text);font-weight:700;font-size:0.9em;text-align:left}
+  .themebtn.on{border-color:var(--accent)}
+  .themebtn .sw{flex:none;width:26px;height:26px;border-radius:8px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.15)}
+  .themebtn .sw i{position:absolute;bottom:0;right:0;width:12px;height:12px;border-radius:50%;border:2px solid var(--surface2)}
 
   .sheet{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-end;z-index:50}
   .sheet.show{display:flex}
   .sheet .in{background:var(--bg);border:1px solid var(--border);width:100%;border-radius:22px 22px 0 0;
-    padding:18px 16px calc(20px + env(safe-area-inset-bottom));max-height:90vh;overflow:auto;max-width:640px;margin:0 auto}
+    padding:18px 16px calc(20px + env(safe-area-inset-bottom));max-height:90vh;overflow:auto;max-width:640px;margin:0 auto;font-size:calc(15px * var(--fs))}
   .grab{width:40px;height:4px;border-radius:2px;background:var(--border);margin:0 auto 14px}
 </style>
 </head>
@@ -233,7 +251,15 @@ en:{today:"Today",week:"Week",body:"Body",kcalLeft:"left",kcalOver:"over",eaten:
   copy:"Copy",dl:"Download file",restore:"Restore",saveKey:"Save key",
   pastePh:"Paste backup text…",apiPh:"sk-ant-… (stored only on this phone)",
   goalWeight:"Goal weight (kg)",kg:"kg",noKey:"Add your Claude API key under ⇅ first.",
-  mealsN:"meals",each:"Tap a meal to edit or delete."},
+  mealsN:"meals",each:"Tap a meal to edit or delete.",
+  helpTitle:"How it works",
+  help1:"Tap ＋ before you eat and take a photo of your food.",
+  help2:"When you finish, take a photo of what's left — or choose a single photo if you ate it all.",
+  help3:"You get the calories and macros for what you actually ate. Check the numbers, then Save.",
+  help4:"Today shows what's left in your day. Week shows your last 7 days. Body tracks your weight.",
+  helpGot:"Got it",
+  appearance:"Appearance",theme:"Theme",textSize:"Text size",
+  sizeNormal:"Normal",sizeLarge:"Large",sizeXL:"Extra large",showHelp:"Show the how-to card again"},
 th:{today:"วันนี้",week:"สัปดาห์",body:"ร่างกาย",kcalLeft:"เหลือ",kcalOver:"เกิน",eaten:"กินแล้ว",target:"เป้าหมาย",
   protein:"โปรตีน",carbs:"คาร์บ",fat:"ไขมัน",meals:"มื้ออาหาร",addMeal:"เพิ่มมื้ออาหาร",
   noMeals:"วันนี้ยังไม่มีมื้ออาหาร\nแตะ ＋ เพื่อบันทึกด้วยรูปภาพ",
@@ -259,22 +285,58 @@ th:{today:"วันนี้",week:"สัปดาห์",body:"ร่าง�
   copy:"คัดลอก",dl:"ดาวน์โหลดไฟล์",restore:"กู้คืน",saveKey:"บันทึกคีย์",
   pastePh:"วางข้อความสำรอง…",apiPh:"sk-ant-… (เก็บในโทรศัพท์นี้เท่านั้น)",
   goalWeight:"น้ำหนักเป้าหมาย (กก.)",kg:"กก.",noKey:"ใส่ Claude API key ที่ ⇅ ก่อน",
-  mealsN:"มื้อ",each:"แตะมื้ออาหารเพื่อแก้ไขหรือลบ"}
+  mealsN:"มื้อ",each:"แตะมื้ออาหารเพื่อแก้ไขหรือลบ",
+  helpTitle:"วิธีใช้งาน",
+  help1:"แตะ ＋ ก่อนกิน แล้วถ่ายรูปอาหารของคุณ",
+  help2:"เมื่อกินเสร็จ ถ่ายรูปที่เหลือ — หรือเลือกรูปเดียวถ้ากินหมด",
+  help3:"ระบบจะบอกแคลอรีและสารอาหารของที่คุณกินจริง ตรวจดูตัวเลข แล้วกดบันทึก",
+  help4:"วันนี้ = ที่เหลือของวัน · สัปดาห์ = 7 วันล่าสุด · ร่างกาย = น้ำหนัก",
+  helpGot:"เข้าใจแล้ว",
+  appearance:"รูปลักษณ์",theme:"ธีม",textSize:"ขนาดตัวอักษร",
+  sizeNormal:"ปกติ",sizeLarge:"ใหญ่",sizeXL:"ใหญ่พิเศษ",showHelp:"แสดงการ์ดวิธีใช้อีกครั้ง"}
 };
 let lang = "en";
 const t = k => (T[lang][k]!==undefined?T[lang][k]:k);
 
+/* ---------- themes ---------- */
+/* Thai-inspired palettes alongside dark/light. accentText is the colour of text ON the accent. */
+const THEMES = {
+  dark:    {label:"Dark",         labelTh:"มืด",       bg:"#0c0c0e",surface:"#18181b",surface2:"#0f0f11",border:"#27272a",text:"#fafafa",dim:"#a1a1aa",faint:"#52525b",accent:"#fb7185",accentText:"#0c0c0e",protein:"#34d399",carbs:"#38bdf8",fat:"#fcd34d",good:"#34d399",danger:"#f87171"},
+  light:   {label:"Light",        labelTh:"สว่าง",     bg:"#f4f2ee",surface:"#ffffff",surface2:"#faf8f4",border:"#e5e0d8",text:"#1c1a17",dim:"#6b6459",faint:"#a89f92",accent:"#e0568b",accentText:"#ffffff",protein:"#0ca678",carbs:"#1c7ed6",fat:"#e8930c",good:"#0ca678",danger:"#e03131"},
+  orchid:  {label:"Orchid",       labelTh:"กล้วยไม้",  bg:"#1a0f1e",surface:"#271732",surface2:"#1e1226",border:"#3d2749",text:"#f7edfa",dim:"#c0a3cc",faint:"#7a5c86",accent:"#e879c9",accentText:"#1a0f1e",protein:"#5ee0a9",carbs:"#7dd3fc",fat:"#fcd34d",good:"#6ee7b7",danger:"#fb7185"},
+  mango:   {label:"Mango Sticky", labelTh:"ข้าวเหนียวมะม่วง",bg:"#151206",surface:"#211b0c",surface2:"#191307",border:"#382b12",text:"#fdf6e3",dim:"#cdbd8e",faint:"#7d6f4c",accent:"#f6c445",accentText:"#151206",protein:"#a3e635",carbs:"#5ec6e0",fat:"#fb923c",good:"#a3e635",danger:"#f87171"},
+  jade:    {label:"Jade Temple",  labelTh:"หยก",       bg:"#08130f",surface:"#0f2019",surface2:"#0a1712",border:"#1d3a2e",text:"#eafaf1",dim:"#93c4ac",faint:"#4d7563",accent:"#f5b940",accentText:"#08130f",protein:"#34d399",carbs:"#38bdf8",fat:"#facc15",good:"#34d399",danger:"#fb7185"},
+  chili:   {label:"Chili Basil",  labelTh:"กะเพรา",    bg:"#160b0b",surface:"#231111",surface2:"#1a0c0c",border:"#3d1e1e",text:"#fdeeee",dim:"#d0a3a3",faint:"#875c5c",accent:"#ef4444",accentText:"#fdeeee",protein:"#4ade80",carbs:"#38bdf8",fat:"#fbbf24",good:"#4ade80",danger:"#fca5a5"},
+  lotus:   {label:"Lotus",        labelTh:"บัว",       bg:"#f7eef2",surface:"#ffffff",surface2:"#fdf4f8",border:"#f0d9e4",text:"#2a1622",dim:"#7a5c6b",faint:"#b596a6",accent:"#d6488f",accentText:"#ffffff",protein:"#0ca678",carbs:"#2b8ad6",fat:"#e08a1e",good:"#0ca678",danger:"#e03131"}
+};
+const SCALES = { normal:1, large:1.15, xl:1.3 };
+
 /* ---------- storage ---------- */
-const APP_VERSION = "1";
+const APP_VERSION = "2";
 const KEY = "joyfuel-v1", KEY_API = "joyfuel-apikey", KEY_MODEL = "joyfuel-model", KEY_LANG = "joyfuel-lang";
 const EMPTY = {
   meals:{},           // { "YYYY-MM-DD": [ {id,time,items,total,note,mode,thumbId} ] }
   weights:[],         // [ {id,date,kg} ]
   goals:{weightKg:null},
-  targets:{kcal:1600,protein:120,carbs:130,fat:55}
+  targets:{kcal:1600,protein:120,carbs:130,fat:55},
+  theme:"dark",
+  scale:"normal",
+  hideHelp:false
 };
 let data = structuredClone(EMPTY);
 let tab = "today";
+
+function applyTheme(){
+  const th = THEMES[data.theme] || THEMES.dark;
+  const r = document.documentElement.style;
+  ["bg","surface","surface2","border","text","dim","faint","accent","accentText","protein","carbs","fat","good","danger"]
+    .forEach(k=> r.setProperty("--"+k, th[k]));
+  r.setProperty("--fs", SCALES[data.scale]||1);
+  const meta=document.querySelector('meta[name="theme-color"]'); if(meta) meta.setAttribute("content", th.bg);
+  const light = data.theme==="light"||data.theme==="lotus";
+  const sb=document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+  if(sb) sb.setAttribute("content", light?"default":"black-translucent");
+}
 
 function load(){
   try{
@@ -284,6 +346,8 @@ function load(){
       data = {...EMPTY, ...p,
         targets:{...EMPTY.targets, ...(p.targets||{})},
         goals:{...EMPTY.goals, ...(p.goals||{})}};
+      if(!THEMES[data.theme]) data.theme="dark";
+      if(!SCALES[data.scale]) data.scale="normal";
     }
   }catch(e){ console.warn("load failed", e); }
   lang = localStorage.getItem(KEY_LANG) || "en";
@@ -441,7 +505,21 @@ function viewToday(){
   const list=data.meals[k]||[];
   const meals = list.length ? list.map(mealCard).join("")
     : `<div class="empty" style="white-space:pre-line">${esc(t("noMeals"))}</div>`;
-  return `
+  const help = data.hideHelp ? "" : `
+  <div class="card p16 mb16 helpcard">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <h2 style="margin:0">👋 ${esc(t("helpTitle"))}</h2>
+      <button class="x" onclick="dismissHelp()" aria-label="close" style="font-size:1.1em">✕</button>
+    </div>
+    <ol class="howto">
+      <li><span class="n">1</span><span>${esc(t("help1"))}</span></li>
+      <li><span class="n">2</span><span>${esc(t("help2"))}</span></li>
+      <li><span class="n">3</span><span>${esc(t("help3"))}</span></li>
+      <li><span class="n">4</span><span>${esc(t("help4"))}</span></li>
+    </ol>
+    <button class="btn" style="width:100%;margin-top:6px" onclick="dismissHelp()">${esc(t("helpGot"))}</button>
+  </div>`;
+  return help + `
   <div class="card p16 mb16">
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
       <h2 style="margin:0">${esc(fmtDay(k))}</h2>
@@ -623,8 +701,29 @@ function viewBody(){
       <div><div class="lbl">${esc(t("fat"))} g</div><input type="number" inputmode="numeric" id="tgF" value="${data.targets.fat}"></div>
     </div>
     <button class="btn" style="width:100%;margin-top:12px" onclick="saveTargets()">${esc(t("save"))}</button>
+  </div>
+  <div class="card p16" style="margin-top:16px">
+    <h2>${esc(t("appearance"))}</h2>
+    <div class="lbl">${esc(t("theme"))}</div>
+    <div class="themes">
+      ${Object.keys(THEMES).map(id=>{ const th=THEMES[id]; const on=data.theme===id;
+        return `<button class="themebtn ${on?"on":""}" onclick="setTheme('${id}')">
+          <span class="sw" style="background:${th.bg}"><i style="background:${th.accent}"></i></span>
+          <span>${esc(lang==="th"?th.labelTh:th.label)}</span></button>`; }).join("")}
+    </div>
+    <div class="lbl" style="margin-top:16px">${esc(t("textSize"))}</div>
+    <div class="seg2">
+      <button class="${data.scale==="normal"?"on":""}" onclick="setScale('normal')">${esc(t("sizeNormal"))}</button>
+      <button class="${data.scale==="large"?"on":""}" onclick="setScale('large')">${esc(t("sizeLarge"))}</button>
+      <button class="${data.scale==="xl"?"on":""}" onclick="setScale('xl')">${esc(t("sizeXL"))}</button>
+    </div>
+    ${data.hideHelp?`<button class="btn2" style="width:100%;margin-top:16px" onclick="showHelpAgain()">${esc(t("showHelp"))}</button>`:""}
   </div>`;
 }
+function dismissHelp(){ data.hideHelp=true; save(); render(); hydrateThumbs(); }
+function showHelpAgain(){ data.hideHelp=false; save(); toast(t("saved")); go("today"); }
+function setTheme(id){ if(!THEMES[id])return; data.theme=id; applyTheme(); save(); render(); if(tab==="body")drawWeight(); }
+function setScale(s){ if(!SCALES[s])return; data.scale=s; applyTheme(); save(); render(); if(tab==="body")drawWeight(); }
 function addWeight(){
   const v=parseFloat(document.getElementById("wIn").value);
   if(!v||v<=0){ return; }
@@ -848,7 +947,8 @@ document.getElementById("btnDownload").onclick=()=>{ const blob=new Blob([JSON.s
 document.getElementById("btnRestore").onclick=()=>{
   try{ const p=JSON.parse(document.getElementById("restoreText").value);
     data={...EMPTY,...p,targets:{...EMPTY.targets,...(p.targets||{})},goals:{...EMPTY.goals,...(p.goals||{})}};
-    save(); render(); hydrateThumbs(); document.getElementById("backupPanel").classList.add("hide"); toast(t("saved"));
+    if(!THEMES[data.theme])data.theme="dark"; if(!SCALES[data.scale])data.scale="normal";
+    applyTheme(); save(); render(); hydrateThumbs(); document.getElementById("backupPanel").classList.add("hide"); toast(t("saved"));
   }catch(e){ toast("Invalid backup",3000); }
 };
 document.getElementById("btnSaveKey").onclick=()=>{
@@ -864,6 +964,7 @@ document.getElementById("btnLang").onclick=()=>setLang(lang==="en"?"th":"en");
 
 /* ---------- boot ---------- */
 load();
+applyTheme();
 document.getElementById("btnLang").textContent=lang==="en"?"EN":"ไทย";
 render();
 hydrateThumbs();
